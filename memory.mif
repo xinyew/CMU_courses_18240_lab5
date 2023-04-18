@@ -41,7 +41,7 @@ DEPTH = 65536;         % Memory depth and width are required   %
 0048 : F320;
 004A : 0001;
 004C : 3120;
-004E : 0002;
+004E : 0001;
 0050 : 3820;
 0052 : 0064;
 0054 : 28C0;
@@ -55,6 +55,6 @@ DEPTH = 65536;         % Memory depth and width are required   %
 0064 : 0000;
 0066 : 0000;
 0068 : 0000;
-006A : 00FF;
+006A : 0002;
 3000 : 0000;
 END;

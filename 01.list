@@ -31,7 +31,7 @@ addr data   label     opcode  operands
 0048 F320             SRAI    R4 R4   
 004A 0001                     $1      
 004C 3120             ADDI    R4 R4   
-004E 0002                     $2      
+004E 0001                     $1      
 0050 3820             SW      R4 R0   
 0052 0064                     I       
 0054 28C0  CHECK      LW      R3 R0   
@@ -45,5 +45,5 @@ addr data   label     opcode  operands
 0064 0000  I          .DW     $0      
 0066 0000  SUM        .DW     $0      
 0068 0000             .DW     $0      
-006A 00FF  LENGTH     .DW     $00FF   
+006A 0002  LENGTH     .DW     $0002   
 3000 0000  ARRAY      .DW     $0      
