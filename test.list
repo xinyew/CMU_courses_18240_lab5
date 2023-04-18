@@ -1,0 +1,4 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+A000 3088  INST01     ADDI    R2 R1   
+A002 8240                     $8240   

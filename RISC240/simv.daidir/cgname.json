@@ -1,0 +1,62 @@
+{
+    "_vcs_unit__3329936646": [
+        "_vcs_unit__3329936646",
+        "W2vaD",
+        "module",
+        1
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
+    "memory1024x16": [
+        "memory1024x16",
+        "LBGWb",
+        "module",
+        3
+    ],
+    "memory1024x16_program": [
+        "memory1024x16_program",
+        "LTm6Y",
+        "module",
+        4
+    ],
+    "SevenSegmentDigit": [
+        "SevenSegmentDigit",
+        "wDpck",
+        "module",
+        5
+    ],
+    "SevenSegmentControl": [
+        "SevenSegmentControl",
+        "pjySW",
+        "module",
+        6
+    ],
+    "comb_write_reg": [
+        "comb_write_reg",
+        "TiIVQ",
+        "module",
+        7
+    ],
+    "memory_synthesis": [
+        "memory_synthesis",
+        "wrad1",
+        "module",
+        8
+    ],
+    "RISC240_top": [
+        "RISC240_top",
+        "zRShV",
+        "module",
+        9
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        10
+    ]
+}
