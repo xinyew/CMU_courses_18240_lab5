@@ -15,17 +15,18 @@ CARRY   ADDI    r1, r1, $1      ;add 1 to upper 16
 NEXT    SW      r1, r0, SUM     ;write back sum[0]
         SW      r2, r3, SUM     ;write back sum[1]
         SRAI    r4, r4, $1      ;divide i by 2 to convert back to index
-        ADDI    r4, r4, $2      ;increment i
+        ADDI    r4, r4, $1      ;increment i
         SW      r4, r0, i       ;write back i
 CHECK   LW      r3, r0, LENGTH
         SLLI    r3, r3, $1      ;LENGTH*2
-        SLTI    r0, r4, r3      ;check i < LENGTH*2
+        SLT     r0, r4, r3      ;check i < LENGTH*2
         BRN     LOOP            ;keep looping if i<LENGTH*2 
         STOP
 
 i       .DW     $0              ;initial value of i
 SUM     .DW     $0              ;initial value of sum[0]
         .DW     $0              ;initial value of sum[1]
-LENGTH  .DW     $00FF           ;placeholder
-ARRAY   .ORG    $3000
+LENGTH  .DW     $0002           ;placeholder
+        .ORG    $3000
+ARRAY   .DW     $0
 

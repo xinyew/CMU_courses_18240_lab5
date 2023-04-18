@@ -1,0 +1,49 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+0010 2840  LOOP       LW      R1 R0   
+0012 0066                     SUM     
+0014 30C0             ADDI    R3 R0   
+0016 0001                     $1      
+0018 2898             LW      R2 R3   
+001A 0066                     SUM     
+001C 2900             LW      R4 R0   
+001E 0064                     I       
+0020 C320             SLLI    R4 R4   
+0022 0001                     $1      
+0024 2960             LW      R5 R4   
+0026 3000                     ARRAY   
+0028 3120             ADDI    R4 R4   
+002A 0002                     $2      
+002C 29A0             LW      R6 R4   
+002E 3000                     ARRAY   
+0030 004D             ADD     R1 R1 R5
+0032 0096             ADD     R2 R2 R6
+0034 A800             BRC             
+0036 003C                     CARRY   
+0038 F800             BRA             
+003A 0040                     NEXT    
+003C 3048  CARRY      ADDI    R1 R1   
+003E 0001                     $1      
+0040 3808  NEXT       SW      R1 R0   
+0042 0066                     SUM     
+0044 3813             SW      R2 R3   
+0046 0066                     SUM     
+0048 F320             SRAI    R4 R4   
+004A 0001                     $1      
+004C 3120             ADDI    R4 R4   
+004E 0002                     $2      
+0050 3820             SW      R4 R0   
+0052 0064                     I       
+0054 28C0  CHECK      LW      R3 R0   
+0056 006A                     LENGTH  
+0058 C2D8             SLLI    R3 R3   
+005A 0001                     $1      
+005C 5023             SLT     R0 R4 R3
+005E 9800             BRN             
+0060 0010                     LOOP    
+0062 FE00             STOP            
+0064 0000  I          .DW     $0      
+0066 0000  SUM        .DW     $0      
+0068 0000             .DW     $0      
+006A 00FF  LENGTH     .DW     $00FF   
+3000 0000  ARRAY      .DW     $0      
