@@ -20,7 +20,6 @@ NEXT    SW      r1, r0, SUM     ;write back sum[0]
 CHECK   LW      r3, r0, LENGTH
         SLLI    r3, r3, $1      ;LENGTH*2
         SLT     r0, r4, r3      ;check i < LENGTH*2
-        BRN     LOOP            ;keep looping if i<LENGTH*2
         STOP
 
 i       .DW     $0              ;initial value of i
