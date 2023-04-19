@@ -1,3 +1,5 @@
-       .ORG $A000
-Inst01 ADDI r2, r1, $8240 ; your very first instruction!
-STOP
+ADD32_1     .EQU     $6453
+            .ORG     $5000
+            .DW      ADD32_1
+ADD32       .EQU     $32
+            .DW      ADD32 r3,r2,r1
