@@ -31,22 +31,23 @@ memory.sv
 constants.sv
 regfile.sv
 alu.sv
-74
-no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
-https_proxy=http://proximus.ece.cmu.edu:3128/
-http_proxy=http://proximus.ece.cmu.edu:3128/
-ftp_proxy=http://proximus.ece.cmu.edu:3128/
-_P9K_TTY=/dev/pts/459
-ZSH_COMPDUMP=/cache/.zcompdump-ece016.ece.local.cmu.edu
+76
+_P9K_TTY=/dev/pts/1
+ZSH_COMPDUMP=/cache/.zcompdump-hh-1305-07.andrew.local.cmu.edu
 ZSH=/afs/andrew.cmu.edu/usr24/xinyew/.oh-my-zsh
-XDG_SESSION_ID=10379
+XMODIFIERS=@im=ibus
+XDG_VTNR=2
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=134
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
 XDG_RUNTIME_DIR=/run/user/2673167
-XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr24/xinyew/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
-VSCODE_IPC_HOOK_CLI=/run/user/2673167/vscode-ipc-bc0e9b49-a5ad-4124-b353-f7387ed9b8f0.sock
-VSCODE_GIT_IPC_HANDLE=/run/user/2673167/vscode-git-4455cf86c0.sock
-VSCODE_GIT_ASKPASS_NODE=/afs/andrew.cmu.edu/usr24/xinyew/.vscode-server/bin/e344f1f539a80912a0e9357cec841f36ce97a4e2/node
-VSCODE_GIT_ASKPASS_MAIN=/afs/andrew.cmu.edu/usr24/xinyew/.vscode-server/bin/e344f1f539a80912a0e9357cec841f36ce97a4e2/extensions/git/dist/askpass-main.js
-VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr24/xinyew/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-xinyew-JQS9pI/database
+WINDOWPATH=1:2
+VTE_VERSION=5204
 VMR_MODE_FLAG=32
 VIMRUNTIMEDIR=/afs/andrew.cmu.edu/usr24/xinyew/.local/usr/share/vim/vim82
 VIMRUNTIME=/afs/andrew.cmu.edu/usr24/xinyew/.local/usr/share/vim/vim82
@@ -61,32 +62,28 @@ VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH_OVERRIDE=linux
 VCS_ARCH=linux64
+USERNAME=xinyew
 UNAME=/bin/uname
 TOOL_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64
-TERM_PROGRAM_VERSION=1.77.2
-TERM_PROGRAM=vscode
 SYN_DIR=/syn/T-2022.03-SP2
 SYNOPSYS_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation
-SSH_CONNECTION=128.2.13.157 53742 172.19.138.18 22
-SSH_CLIENT=128.2.13.157 53742 22
+SSH_AUTH_SOCK=/run/user/2673167/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=27793
 SNPS_VCS_CLANG_PATH=/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-SELINUX_USE_CURRENT_RANGE=
-SELINUX_ROLE_REQUESTED=
-SELINUX_LEVEL_REQUESTED=
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/27772,unix/unix:/tmp/.ICE-unix/27772
 SCRNAME=vcs
 SCRIPT_NAME=vcs
 QUARTUS_64BIT=1
-QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
 QT_GRAPHICSSYSTEM_CHECKED=1
 QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
 QTDIR=/usr/lib64/qt-3.3
 P9K_TTY=old
-P9K_SSH=1
+P9K_SSH=0
 OVA_UUM=0
-NO_PROXY=localhost,127.0.0.1,.cmu.edu,.cmu.local
 MODULESHOME=/usr/share/Modules
 MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
 LSCOLORS=Gxfxcxdxbxegedabagacad
@@ -95,13 +92,18 @@ LESSOPEN=||/usr/bin/lesspipe.sh %s
 LESS=-R
 LC_ALL=C
 KRB5CCNAME=KEYRING:persistent:2673167
-KDEDIRS=/usr
-HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
-HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
 HISTCONTROL=ignoredups
-GIT_ASKPASS=/afs/andrew.cmu.edu/usr24/xinyew/.vscode-server/bin/e344f1f539a80912a0e9357cec841f36ce97a4e2/extensions/git/dist/askpass.sh
-FTP_PROXY=http://proximus.ece.cmu.edu:3128/
+GNOME_TERMINAL_SERVICE=:1.93
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/1b23c9b8_d6cd_4e5c_b720_599470a36496
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GJS_DEBUG_OUTPUT=stderr
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
+DESKTOP_SESSION=gnome-classic
 DC_HOME=/syn/T-2022.03-SP2/
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-NWv6sD5uZx,guid=1fc10198c285f71ac372f39f6447fd7d
 CVS_RSH=ssh
 COLORTERM=truecolor
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
@@ -111,10 +113,10 @@ AKLOG=/usr/bin/aklog
 8
 1681670110 alu.sv
 1681670110 regfile.sv
-1682457518 constants.sv
+1682462265 constants.sv
 1681670110 memory.sv
 1682459969 library.sv
-1682460715 datapath.sv
+1682463840 datapath.sv
 1682458042 controlpath.sv
 1682460509 RISC240.sv
 4
@@ -122,5 +124,5 @@ AKLOG=/usr/bin/aklog
 1654053585 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvfs.so
-1682460723 simv.daidir
+1682464424 simv.daidir
 -1 partitionlib

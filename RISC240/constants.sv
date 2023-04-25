@@ -82,8 +82,8 @@ typedef enum logic{ // Condition code
 typedef enum logic [6:0] {
 // Microcode operations (i.e., FSM states)
    // ADD32
-   ADD32 = 7'b011_0000,
-   ADD32_1 = 7'b011_0001,
+   ADD32 = 7'b011_0010,
+   ADD32_1 = 7'b011_0011,
 
 
    FETCH  = 7'b000_1001, 

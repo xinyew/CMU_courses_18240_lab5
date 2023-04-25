@@ -112,7 +112,7 @@ module datapath (
                                      .clock(clock), .reset_L(reset_L));
 
    mux2to1 #(.WIDTH(3)) rs1Mux(.out(rs1MuxOut), .inA(selRS1), 
-                                .inB(selRS2 + 3'b1), .sel(add32Sel));
+                                .inB(selRS1 + 3'b1), .sel(add32Sel));
    mux2to1 #(.WIDTH(3)) rs2Mux(.out(rs2MuxOut), .inA(selRS2), 
                                 .inB(selRS2 + 3'b1), .sel(add32Sel));
    mux2to1 #(.WIDTH(3)) rdMux(.out(rdMuxOut), .inA(selRD), 
