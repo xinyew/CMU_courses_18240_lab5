@@ -38,6 +38,7 @@ module datapath (
    output [2:0]  selRS1,
    output [2:0]  selRS2,
    input controlPts  cPts,
+   input logic  add32Sel,
    input         clock,
    input         reset_L);
 
@@ -47,6 +48,10 @@ module datapath (
    logic [3:0]  newCC;
    logic loadReg_L, loadPC_L, loadMDR_L, writeMD_L, loadMAR_L, loadIR_L;
    tri   [15:0] newMDR;
+
+   logic [2:0] rs1MuxOut, rs2MuxOut, rdMuxOut;
+   logic [3:0] CCMuxOut;
+   logic [3:0] add32CC;
 
    // Assign wires
    assign loadMDR_L = writeMD_L & cPts.re_L;
@@ -62,9 +67,9 @@ module datapath (
            .outRS2(regRS2),
            .outView(viewReg),
            .in(aluResult),
-           .selRD,
-           .selRS1,
-           .selRS2,
+           .selRD(rdMuxOut),
+           .selRS1(rs1MuxOut),
+           .selRS2(rs2MuxOut),
            .clock,
            .reset_L,
            .load_L(loadReg_L));
@@ -102,7 +107,17 @@ module datapath (
                                      .clock(clock), .reset_L(reset_L));
    register #(.WIDTH(16)) instrReg(  .out(ir), .in(aluResult), .load_L(loadIR_L),
                                      .clock(clock), .reset_L(reset_L));
-   register #(.WIDTH(4)) condCodeReg(.out(condCodes), .in(newCC), .load_L(cPts.lcc_L),
+   register #(.WIDTH(4)) condCodeReg(.out(condCodes), .in(CCMuxOut), .load_L(cPts.lcc_L),
                                      .clock(clock), .reset_L(reset_L));
+
+   mux2to1 #(.WIDTH(3)) rs1Mux(.out(rs1MuxOut), .inA(selRS1), 
+                                .inB(selRS2 + 3'b1), .sel(add32Sel));
+   mux2to1 #(.WIDTH(3)) rs2Mux(.out(rs2MuxOut), .inA(selRS2), 
+                                .inB(selRS2 + 3'b1), .sel(add32Sel));
+   mux2to1 #(.WIDTH(3)) rdMux(.out(rdMuxOut), .inA(selRD), 
+                                .inB(selRD + 3'b1), .sel(add32Sel));
+   
+   mux2to1 #(.WIDTH(4)) CCMux(.out(CCMuxOut), .inA(newCC),
+                              .inB(add32CC), .sel(add32Sel));
 
 endmodule

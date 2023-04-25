@@ -1,0 +1,6 @@
+{"vcs1":{"timestamp_begin":1682459838.368177757, "rt":0.13, "ut":0.09, "st":0.03}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1682459838.017714591}
+{"VCS_COMP_START_TIME": 1682459838.017714591}
+{"VCS_COMP_END_TIME": 1682459838.540911826}
+{"VCS_USER_OPTIONS": "+lint=all -sverilog -nc ./alu.sv ./constants.sv ./controlpath.sv ./datapath.sv ./library.sv ./memory.sv ./regfile.sv ./RISC240.sv ./tb.sv"}
+{"vcs1": {"peak_mem": 321952}}

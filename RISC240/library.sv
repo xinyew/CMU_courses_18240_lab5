@@ -33,6 +33,34 @@
  *                   Altera IP block (mgcai)
  */
 
+module mux2to1 #(parameter WIDTH = 16) (
+   input  logic [WIDTH-1:0] inA, inB,
+   output logic [WIDTH-1:0] out,
+   input  logic sel);
+
+   assign out = sel? inB : inA;
+
+endmodule : mux2to1
+
+module add32Adder (
+   output logic [15:0] out,
+   output logic [3:0]  condCodes,
+   input [15:0]      inA,
+   input logic       inB);
+
+   logic Z, C, N, V;
+   logic [15:0] inBB;
+
+   always_comb begin
+      inBB = inB ? 16'b1 : 16'b0;
+      {C, out} = inA + inBB;                     
+      V = (inA[15] & inBB[15] & ~out[15]) | (~inA[15] & ~inBB[15] & out[15]);
+      N = out[15];
+      Z = (out === 16'h0000)?1:0;
+
+      condCodes = {Z, C, N, V};
+   end
+endmodule : add32Adder
 /*
  * module: memory1024x16
  *

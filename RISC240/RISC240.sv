@@ -67,6 +67,7 @@ module RISC240_top();
   logic clock, reset_L;
 
   logic [15:0] r7, r6, r5, r4, r3, r2, r1, r0;
+  logic add32Sel;
   assign {r7, r6, r5, r4, r3, r2, r1, r0} = regView;
 
    controlpath cp(.out(cPts),
@@ -75,10 +76,12 @@ module RISC240_top();
                   .clock(clock),
                   .reset_L(reset_L),
                   .currState(currState),
-                  .nextState(nextState));
+                  .nextState(nextState),
+                  .add32Sel(add32Sel));
 
    datapath dp(.ir(ir),
                .condCodes(condCodes),
+               .add32Sel(add32Sel),
                .aluSrcA(aluSrc1),
                .aluSrcB(aluSrc2),
                .viewReg(regView),

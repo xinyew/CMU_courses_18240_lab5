@@ -22,7 +22,7 @@
  */
 
 // Comment this line when simulating, uncomment when synthesizing.
-`define synthesis
+// `define synthesis
 
 `ifndef sv_CONSTANTS
 `define sv_CONSTANTS
@@ -81,6 +81,11 @@ typedef enum logic{ // Condition code
 
 typedef enum logic [6:0] {
 // Microcode operations (i.e., FSM states)
+   // ADD32
+   ADD32 = 7'b011_0000,
+   ADD32_1 = 7'b011_0001,
+
+
    FETCH  = 7'b000_1001, 
    FETCH1 = 7'b000_1010, 
    FETCH2 = 7'b000_1011, 

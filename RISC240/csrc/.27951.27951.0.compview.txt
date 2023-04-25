@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1682458333.144085358, "rt":0.41, "ut":0.22, "st":0.12}}
+{"vcselab":{"timestamp_begin":1682458333.589069336, "rt":0.34, "ut":0.20, "st":0.09}}
+{"link":{"timestamp_begin":1682458333.949352153, "rt":0.19, "ut":0.05, "st":0.11}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1682458332.814761124}
+{"VCS_COMP_START_TIME": 1682458332.814761124}
+{"VCS_COMP_END_TIME": 1682458334.178361246}
+{"VCS_USER_OPTIONS": "+lint=all -sverilog -nc ./alu.sv ./constants.sv ./controlpath.sv ./datapath.sv ./library.sv ./memory.sv ./regfile.sv ./RISC240.sv"}
+{"vcs1": {"peak_mem": 338776}}
+{"stitch_vcselab": {"peak_mem": 238976}}
