@@ -51,6 +51,7 @@ module datapath (
 
    logic [2:0] rs1MuxOut, rs2MuxOut, rdMuxOut;
    logic [3:0] CCMuxOut;
+   logic [15:0] aluResultTmp, aluResultAdd32;
    logic [3:0] add32CC;
 
    // Assign wires
@@ -89,7 +90,7 @@ module datapath (
                              .out(aluSrcB),
                              .sel(cPts.srcB));
 
-   alu alu_dp(.out(aluResult), .condCodes(newCC), .inA(aluSrcA), .inB(aluSrcB),
+   alu alu_dp(.out(aluResultTmp), .condCodes(newCC), .inA(aluSrcA), .inB(aluSrcB),
               .opcode(cPts.alu_op));
 
    logic [7:0] dest_out;
@@ -119,5 +120,10 @@ module datapath (
    
    mux2to1 #(.WIDTH(4)) CCMux(.out(CCMuxOut), .inA(newCC),
                               .inB(add32CC), .sel(add32Sel));
+   add32Adder fA(.out(aluResultAdd32), .condCodes(add32CC),
+                 .inA(aluResultTmp), .inB(condCodes[2]));   
+
+   mux2to1 #(.WIDTH(16)) aluOutMux(.out(aluResult), .inA(aluResultTmp), 
+                                   .inB(aluResultAdd32), .sel(add32Sel));
 
 endmodule

@@ -114,7 +114,7 @@ AKLOG=/usr/bin/aklog
 1682457518 constants.sv
 1681670110 memory.sv
 1682459969 library.sv
-1682460553 datapath.sv
+1682460715 datapath.sv
 1682458042 controlpath.sv
 1682460509 RISC240.sv
 4
@@ -122,5 +122,5 @@ AKLOG=/usr/bin/aklog
 1654053585 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvfs.so
-1682460559 simv.daidir
+1682460723 simv.daidir
 -1 partitionlib
