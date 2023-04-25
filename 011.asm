@@ -41,17 +41,17 @@ DONE        ADD     r7, r7, r5
             STOP
 
             .ORG    $5000
-LENGTH      .DW     $4
+LENGTH      .DW     $3
             .ORG    $6000
 SUM         .DW     $0000
             .DW     $0000
             .ORG    $1234
-ARRAY       .DW     $abab
-            .DW     $abab
-            .DW     $bcbc
-            .DW     $bcbc
-            .DW     $dede
-            .DW     $dede
+ARRAY       .DW     $FFFF
+            .DW     $FFFF
+            .DW     $FFFF
+            .DW     $FFFF
+            .DW     $FFFF
+            .DW     $FFFF
             .DW     $f0f0
             .DW     $f0f0
             .DW     $0000

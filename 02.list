@@ -1,0 +1,51 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+0010 2840             LW      R1 R0   
+0012 5000                     LENGTH  
+0014 0049             ADD     R1 R1 R1
+0016 0049             ADD     R1 R1 R1
+0018 3080             LI      R2      
+001A 0000                     $0      
+001C 3180             LI      R6      
+001E 0000                     $0      
+0020 31C0             LI      R7      
+0022 0000                     $0      
+0024 500A  LOOP       SLT     R0 R1 R2
+0026 C800             BRZ             
+0028 0040                     DONE    
+002A 2950  LOAD       LW      R5 R2   
+002C 1234                     ARRAY   
+002E 3090             ADDI    R2 R2   
+0030 0002                     $2      
+0032 2910             LW      R4 R2   
+0034 1234                     ARRAY   
+0036 65B4  CALC       .DW     ADD32   
+0038 3090             ADDI    R2 R2   
+003A 0002                     $2      
+003C F800             BRA             
+003E 0024                     LOOP    
+0040 3807  DONE       SW      R0 R7   
+0042 6000                     SUM     
+0044 3100             ADDI    R4 R0   
+0046 0002                     $2      
+0048 3826             SW      R4 R6   
+004A 6000                     SUM     
+004C FE00             STOP            
+5000 0003  LENGTH     .DW     $3      
+6000 0000  SUM        .DW     $0000   
+6002 0000             .DW     $0000   
+1234 FFFF  ARRAY      .DW     $FFFF   
+1236 FFFF             .DW     $FFFF   
+1238 FFFF             .DW     $FFFF   
+123A FFFF             .DW     $FFFF   
+123C FFFF             .DW     $FFFF   
+123E FFFF             .DW     $FFFF   
+1240 F0F0             .DW     $F0F0   
+1242 F0F0             .DW     $F0F0   
+1244 0000             .DW     $0000   
+1246 0000             .DW     $0000   
+1248 0000             .DW     $0000   
+124A 0000             .DW     $0000   
+124C 0000             .DW     $0000   
+124E 0000             .DW     $0000   
+1250 0000             .DW     $0000   

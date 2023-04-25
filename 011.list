@@ -42,15 +42,15 @@ addr data   label     opcode  operands
 005E 3826             SW      R4 R6   
 0060 6000                     SUM     
 0062 FE00             STOP            
-5000 0004  LENGTH     .DW     $4      
+5000 0003  LENGTH     .DW     $3      
 6000 0000  SUM        .DW     $0000   
 6002 0000             .DW     $0000   
-1234 ABAB  ARRAY      .DW     $ABAB   
-1236 ABAB             .DW     $ABAB   
-1238 BCBC             .DW     $BCBC   
-123A BCBC             .DW     $BCBC   
-123C DEDE             .DW     $DEDE   
-123E DEDE             .DW     $DEDE   
+1234 FFFF  ARRAY      .DW     $FFFF   
+1236 FFFF             .DW     $FFFF   
+1238 FFFF             .DW     $FFFF   
+123A FFFF             .DW     $FFFF   
+123C FFFF             .DW     $FFFF   
+123E FFFF             .DW     $FFFF   
 1240 F0F0             .DW     $F0F0   
 1242 F0F0             .DW     $F0F0   
 1244 0000             .DW     $0000   
