@@ -30,29 +30,31 @@ DONE        SW      r0, r7, SUM
             STOP
 
             .ORG    $5000
-LENGTH      .DW     $3
-
-            .ORG    $6000
-SUM         .DW     $0000
-            .DW     $0000
+LENGTH      .EQU    $0300
+SUM         .EQU    $0400
             .ORG    $1234
-ARRAY       .DW     $FFFF
+ARRAY       .DW     $8283
+            .DW     $8648
+            .DW     $7124
+            .DW     $CEDF
+            .DW     $DEAD
+            .DW     $BEEF
             .DW     $FFFF
             .DW     $FFFF
-            .DW     $FFFF
-            .DW     $FFFF
-            .DW     $FFFF
-            .DW     $f0f0
-            .DW     $f0f0
-            .DW     $0000
-            .DW     $0000
-            .DW     $0000
-            .DW     $0000
-            .DW     $0000
-            .DW     $0000
-            .DW     $0000
+            .DW     $C130
+            .DW     $031C
+            .DW     $1246
+            .DW     $C140
+            .DW     $1824
+            .DW     $2922
+            .DW     $2130
+	    .DW     $6491
+            .DW     $D053
+            .DW     $3493
+            .DW	    $4172
+            .DW     $5447
 
-ADD32       .EQU     $65B4
+ADD32       .EQU    $65B4
 
 
 
