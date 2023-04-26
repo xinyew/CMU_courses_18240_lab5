@@ -5,7 +5,7 @@
 ; r7 for rs2
 
             .ORG    $0000
-            LW      r1, r0, LENGTH  ; loop counter
+START       LW      r1, r0, $300    ; loop counter
             ADD     r1, r1, r1      ; loop counter *= 2
             ADD     r1, r1, r1      ; loop counter *= 2
             LI      r2, $0          ; indexing
@@ -24,15 +24,11 @@ CALC        .DW     ADD32
             BRA     LOOP
 
 
-DONE        SW      r0, r7, SUM
-            ADDI    r4, r0, $2
-            SW      r4, r6, SUM
-            STOP
+DONE        SW      r0, r7, $400
+            SW      r0, r6, $400
+            BRA	    START
 
-            .ORG    $5000
-LENGTH      .EQU    $0300
-SUM         .EQU    $0400
-            .ORG    $1234
+            .ORG    $0050
 ARRAY       .DW     $8283
             .DW     $8648
             .DW     $7124

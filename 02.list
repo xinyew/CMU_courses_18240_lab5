@@ -34,12 +34,12 @@ addr data   label     opcode  operands
 5000 0003  LENGTH     .DW     $3      
 6000 0000  SUM        .DW     $0000   
 6002 0000             .DW     $0000   
-1234 FFFF  ARRAY      .DW     $FFFF   
-1236 FFFF             .DW     $FFFF   
-1238 FFFF             .DW     $FFFF   
-123A FFFF             .DW     $FFFF   
-123C FFFF             .DW     $FFFF   
-123E FFFF             .DW     $FFFF   
+1234 8000  ARRAY      .DW     $8000   
+1236 0000             .DW     $0000   
+1238 8001             .DW     $8001   
+123A 0001             .DW     $0001   
+123C 1001             .DW     $1001   
+123E 1001             .DW     $1001   
 1240 F0F0             .DW     $F0F0   
 1242 F0F0             .DW     $F0F0   
 1244 0000             .DW     $0000   

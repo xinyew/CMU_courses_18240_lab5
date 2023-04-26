@@ -35,12 +35,12 @@ LENGTH      .DW     $3
 SUM         .DW     $0000
             .DW     $0000
             .ORG    $1234
-ARRAY       .DW     $FFFF
-            .DW     $FFFF
-            .DW     $FFFF
-            .DW     $FFFF
-            .DW     $FFFF
-            .DW     $FFFF
+ARRAY       .DW     $8000
+            .DW     $0000
+            .DW     $8001
+            .DW     $0001
+            .DW     $1001
+            .DW     $1001
             .DW     $f0f0
             .DW     $f0f0
             .DW     $0000

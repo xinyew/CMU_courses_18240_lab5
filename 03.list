@@ -1,0 +1,52 @@
+addr data   label     opcode  operands
+---- ----  --------   ------  --------
+0000 2840  START      LW      R1 R0   
+0002 0300                     $300    
+0004 0049             ADD     R1 R1 R1
+0006 0049             ADD     R1 R1 R1
+0008 3080             LI      R2      
+000A 0000                     $0      
+000C 3180             LI      R6      
+000E 0000                     $0      
+0010 31C0             LI      R7      
+0012 0000                     $0      
+0014 500A  LOOP       SLT     R0 R1 R2
+0016 C800             BRZ             
+0018 0030                     DONE    
+001A 2950  LOAD       LW      R5 R2   
+001C 0050                     ARRAY   
+001E 3090             ADDI    R2 R2   
+0020 0002                     $2      
+0022 2910             LW      R4 R2   
+0024 0050                     ARRAY   
+0026 65B4  CALC       .DW     ADD32   
+0028 3090             ADDI    R2 R2   
+002A 0002                     $2      
+002C F800             BRA             
+002E 0014                     LOOP    
+0030 3807  DONE       SW      R0 R7   
+0032 0400                     $400    
+0034 3806             SW      R0 R6   
+0036 0400                     $400    
+0038 F800             BRA             
+003A 0000                     START   
+0050 8283  ARRAY      .DW     $8283   
+0052 8648             .DW     $8648   
+0054 7124             .DW     $7124   
+0056 CEDF             .DW     $CEDF   
+0058 DEAD             .DW     $DEAD   
+005A BEEF             .DW     $BEEF   
+005C FFFF             .DW     $FFFF   
+005E FFFF             .DW     $FFFF   
+0060 C130             .DW     $C130   
+0062 031C             .DW     $031C   
+0064 1246             .DW     $1246   
+0066 C140             .DW     $C140   
+0068 1824             .DW     $1824   
+006A 2922             .DW     $2922   
+006C 2130             .DW     $2130   
+006E 6491             .DW     $6491   
+0070 D053             .DW     $D053   
+0072 3493             .DW     $3493   
+0074 4172             .DW     $4172   
+0076 5447             .DW     $5447   
