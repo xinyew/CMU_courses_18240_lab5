@@ -37,6 +37,11 @@ module datapath (
    output [2:0]  selRD,
    output [2:0]  selRS1,
    output [2:0]  selRS2,
+   output logic is300,
+   output logic is400,
+   input logic [15:0] in300,
+   output logic [15:0] out400,
+
    input controlPts  cPts,
    input logic  add32Sel,
    input         clock,
@@ -75,9 +80,15 @@ module datapath (
            .reset_L,
            .load_L(loadReg_L));
 
-   tridrive #(.WIDTH(16)) a(.data(aluResult), .bus(newMDR), .en_L(writeMD_L)),
-                          b(.data(dataBus), .bus(newMDR), .en_L(cPts.re_L)),
-                          c(.data(MDRout), .bus(dataBus), .en_L(cPts.we_L));
+   assign is400 = memAddr == 16'h400 ? 1'b1: 1'b0;
+   assign is300 = memAddr == 16'h300 ? 1'b1: 1'b0;
+
+
+   tridrive #(.WIDTH(16)) a(.data(aluResult), .bus(newMDR), .en_L(writeMD_L|is300|is400)),
+                          b(.data(dataBus), .bus(newMDR), .en_L(cPts.re_L|is300|is400)),
+                          c(.data(MDRout), .bus(dataBus), .en_L(cPts.we_L|is300|is400)),
+                          d(.data(in300), .bus(newMDR), .en_L(~is300)),
+                          e(.data(aluResult), .bus(out400), .en_L(~is400));
 
    aluMux #(.WIDTH(16)) MuxA(.inA(regRS1),
                              .inB(pc),

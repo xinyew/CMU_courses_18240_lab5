@@ -35,23 +35,17 @@
         "module",
         5
     ],
-    "SevenSegmentControl": [
-        "SevenSegmentControl",
-        "pjySW",
-        "module",
-        6
-    ],
     "comb_write_reg": [
         "comb_write_reg",
         "TiIVQ",
         "module",
         7
     ],
-    "memory_synthesis": [
-        "memory_synthesis",
-        "wrad1",
+    "memory_simulation": [
+        "memory_simulation",
+        "jHknM",
         "module",
-        8
+        1
     ],
     "...MASTER...": [
         "SIM",

@@ -79,8 +79,6 @@ module RISC240_top();
                   .nextState(nextState),
                   .add32Sel(add32Sel));
 
-   logic is300, is400;
-   logic [15:0] in300, out400;
    datapath dp(.ir(ir),
                .condCodes(condCodes),
                .add32Sel(add32Sel),
@@ -92,22 +90,36 @@ module RISC240_top();
                .memAddr(memAddr),
                .MDRout(memData),
                .dataBus(dataBus),
-               .is300(is300),
-               .is400(is400),
-               .in300(in300),
-               .out400(out400),
                .selRD,
                .selRS1,
                .selRS2,
                .cPts(cPts),
                .clock,
                .reset_L);
-    logic [15:0] ledrVal;
+    
 
-    register #(16) rrr(.out(ledrVal), .in(out400), .clock(clock),
-                       .reset_L(reset_L), .load_L(~is400));
-    assign LEDR[15:0] = ledrVal;
-    assign in300 = SW[15:0];
+    // logic [15:0] ledrVal, SWVal;
+    // logic ledr_ld, SW_ld;
+    // register #(16) redrReg(.out(ledrVal), in(dataBus),
+    //                        .load_L(ledr_ld), .clock(clock), 
+    //                        .reset_L(reset_L));
+
+    // register #(16) SWReg(.out(), in(SW[15:0]),
+    //                        .load_L(SW_ld), .clock(clock), 
+    //                        .reset_L(reset_L));
+
+    // assign REDR = {2'b0, redrVal};
+
+    // always_comb begin
+    //   ledr_ld = 1'b1;
+    //   SW_ld = 1'b1;
+    //   if (memAddr == 'h400) begin
+    //     ledr_ld = 1'b0;
+    //   end
+    //   if (memAddr == 'h300) begin
+    //     SW_ld = 1'b0;
+    //   end
+    // end
 
    memorySystem mem(.data(dataBus),
                     .address(memAddr),
